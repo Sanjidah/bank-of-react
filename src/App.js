@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Home from './components/Home';
 import UserProfile from './components/UserProfile';
 import Debits from './components/Debits';
+import Credits from './components/Credits';
 import LogIn from './LogIn';
 import axios from 'axios';
 import './App.css';
@@ -60,6 +61,8 @@ class App extends Component {
     );
     const { debits } = this.state;
     const DebitsComponent = () => (<Debits addDebit={this.addDebit} debits={debits} />);
+    const { credits } = this.state;
+    const CreditsComponent = () => (<Credits addCredit={this.addCredit} credits={credits} />);
     const LogInComponent = () => (<LogIn user={this.state.currentUser} mockLogIn={this.mockLogIn} />)
 
     return (
@@ -68,6 +71,7 @@ class App extends Component {
             <Route exact path="/" render={HomeComponent}/>
             <Route exact path="/userProfile" render={UserProfileComponent}/>
             <Route exact path="/debits" render={DebitsComponent}/>
+            <Route exact path="/credits" render={CreditsComponent}/>
             <Route exact path="/login" render={LogInComponent}/>
           </div>
         </Router>
