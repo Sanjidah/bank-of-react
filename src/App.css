@@ -1,5 +1,33 @@
 .App {
   text-align: center;
+  font-family: "Garamond", Times, serif;
+}
+
+/* img {
+  margin-top: 30px;
+  max-width: 30%;
+  height: auto;
+} */
+
+.btn-area {
+  font-family: "Baskerville", Times, serif;
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 14px 40px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(65, 169, 177);
+  border-radius: 12px;
+  margin: 20px;
+  line-height: 1.5;
+  /* width: fit-content;
+  height: fit-content; */
+}
+
+.btn-area:hover {
+  background-color: rgba(73, 193, 209, 0.808);
+  color: white;
 }
 
 .App-logo {

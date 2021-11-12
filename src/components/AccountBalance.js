@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class AccountBalance extends Component {
   render() {
     return (
-        <div>
+        <div style={{fontSize:'20px', fontFamily:'Baskerville'}}>
           Balance: {this.props.accountBalance}
         </div>
     );
