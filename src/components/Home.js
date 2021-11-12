@@ -6,15 +6,15 @@ class Home extends Component {
   render() {
     return (
         <div>
-          <img src="https://picsum.photos/201" alt="bank"/>
-          <h1>Bank of React</h1>
+          <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/9108/bank-clipart-md.png" alt="bank" style={{marginTop:"30px", height:"auto", width:"400px"}}/>
+          <h1 style={{fontFamily:'Baskerville'}}>Bank of React</h1>
 
-          <Link to="/logIn">Log In  </Link>
-          <Link to="/userProfile">User Profile </Link>
-          <Link to="/debits">Debits </Link>
-          <Link to="/credits">Credits </Link>
+          <Link to="/logIn" class="btn-area"> Log In  </Link>
+          <Link to="/userProfile" class="btn-area"> User Profile </Link>
+          <Link to="/debits" class="btn-area"> Debits </Link>
+          <Link to="/credits" class="btn-area"> Credits </Link>
           
-          <AccountBalance accountBalance={this.props.accountBalance}/>
+          <AccountBalance accountBalance={this.props.accountBalance} />
         </div>
     );
   }
