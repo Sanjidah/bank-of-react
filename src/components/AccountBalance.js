@@ -4,7 +4,7 @@ class AccountBalance extends Component {
   render() {
     return (
         <div style={{fontSize:'20px', fontFamily:'Baskerville'}}>
-          Balance: {this.props.accountBalance}
+          Balance: ${(Math.round(this.props.accountBalance* 100) / 100).toFixed(2)}
         </div>
     );
   }
