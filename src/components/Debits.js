@@ -28,8 +28,11 @@ const Debits = (props) => {
         <u>Debits </u>
       </h1>
       <form onSubmit={props.addDebit}>
+        <p>Enter description here:</p>
         <input type="text" name="description" />
+        <p>Enter amount here:</p>
         <input type="number" name="amount" />
+        <p>Click to submit new debit</p>
         <button type="submit">Add Debit</button>
       </form>
       {debitsView()}
