@@ -47,6 +47,11 @@ class App extends Component {
   //updates the debit state based on user input
   addDebit = (e) => {
     //send to debits view via props
+    //updates state based off user input
+    e.preventDefault();
+    const description = e.target[0].value;
+    const amount = Number(e.target[1].value);
+    console.log(description, amount);
   };
 
   mockLogIn = (logInInfo) => {
