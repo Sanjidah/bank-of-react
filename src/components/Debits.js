@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 
 const Debits = (props) => {
   //fuction displays the debits
+  // const pull_data = (data) => {
+  //   console.log(data); 
+  // }
+  console.log(props.AccountBalance);
+  // this.props.accountBalance()      
   let debitsView = () => {
     const { debits } = props;
     return debits.map((debit) => {
@@ -27,6 +32,11 @@ const Debits = (props) => {
         {" "}
         <u>Debits </u>
       </h1>
+      <Link to="/" class="btn-area"> Home </Link>
+      <Link to="/logIn" class="btn-area"> Log In  </Link>
+      <Link to="/userProfile" class="btn-area"> User Profile </Link>
+      <Link to="/credits" class="btn-area"> Credits </Link>
+      <AccountBalance/>
       <form onSubmit={props.addDebit}>
         <p>Enter description here:</p>
         <input type="text" name="description" />
