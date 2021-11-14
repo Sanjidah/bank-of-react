@@ -76,7 +76,7 @@ class App extends Component {
     );
     const { credits } = this.state;
     const CreditsComponent = () => (
-      <Credits addCredit={this.addCredit} credits={credits} />
+      <Credits addCredit={this.addCredit} credits={credits} accountBalance={this.state.accountBalance} />
     );
     const LogInComponent = () => (
       <LogIn user={this.state.currentUser} mockLogIn={this.mockLogIn} />
