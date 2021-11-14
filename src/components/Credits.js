@@ -24,14 +24,14 @@ const Credits = (props) => {
             <Link to="/userProfile" class="btn-area"> User Profile </Link>
             <Link to="/debits" class="btn-area"> Debits </Link>
             <AccountBalance accountBalance={props.accountBalance}/>
-        <form onSubmit={props.addCebit}>
-        <p>Enter description here:</p>
-        <input type="text" name="description" />
-        <p>Enter amount here:</p>
-        <input type="number" name="amount" />
-        <p>Click to submit new credit</p>
-        <button type="submit">Add Credit</button>
-      </form>
+        <form onSubmit={props.addCredit}>
+            <p>Enter description here:</p>
+            <input type="text" name="description" />
+            <p>Enter amount here:</p>
+            <input type="number" name="amount" />
+            <p>Click to submit new credit</p>
+            <button type="submit">Add Credit</button>
+        </form>
             {creditsView()}
         </div>
     )

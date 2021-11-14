@@ -2,13 +2,7 @@ import React, { Component } from "react";
 import AccountBalance from "./AccountBalance";
 import { Link } from "react-router-dom";
 
-const Debits = (props) => {
-  //fuction displays the debits
-  // const pull_data = (data) => {
-  //   console.log(data); 
-  // }
-  console.log(props.AccountBalance);
-  // this.props.accountBalance()      
+const Debits = (props) => {      
   let debitsView = () => {
     const { debits } = props;
     return debits.map((debit) => {
@@ -17,9 +11,8 @@ const Debits = (props) => {
         <ol key={debit.id}>
           <div>
             <h3>{debit.description}</h3>
-            <p>
-              <a> Price: ${debit.amount}</a>
-              <a> Date: {date} </a>
+            <p> <a> Price: ${debit.amount}</a>
+                <a> Date: {date} </a>
             </p>
           </div>
         </ol>
@@ -36,7 +29,7 @@ const Debits = (props) => {
       <Link to="/logIn" class="btn-area"> Log In  </Link>
       <Link to="/userProfile" class="btn-area"> User Profile </Link>
       <Link to="/credits" class="btn-area"> Credits </Link>
-      <AccountBalance/>
+      <AccountBalance accountBalance={props.accountBalance}/>
       <form onSubmit={props.addDebit}>
         <p>Enter description here:</p>
         <input type="text" name="description" />
