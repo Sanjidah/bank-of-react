@@ -14,6 +14,10 @@ const Credits = (props) => {
         <div>
             <h1> Credits </h1>
             {creditsView()}
+            <Link to="/" class="btn-area"> Home </Link>
+            <Link to="/logIn" class="btn-area"> Log In  </Link>
+            <Link to="/userProfile" class="btn-area"> User Profile </Link>
+            <Link to="/debits" class="btn-area"> Debits </Link>
         </div>
     )
 }
