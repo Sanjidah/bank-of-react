@@ -19,17 +19,20 @@ const Debits = (props) => {
       );
     });
   };
+  
   return (
     <div>
       <h1>
         {" "}
         <u>Debits </u>
       </h1>
+
       <Link to="/" class="btn-area"> Home </Link>
       <Link to="/logIn" class="btn-area"> Log In  </Link>
       <Link to="/userProfile" class="btn-area"> User Profile </Link>
       <Link to="/credits" class="btn-area"> Credits </Link>
       <AccountBalance accountBalance={props.accountBalance}/>
+      
       <form onSubmit={props.addDebit}>
         <p>Enter description here:</p>
         <input type="text" name="description" />
@@ -38,9 +41,10 @@ const Debits = (props) => {
         <p>Click to submit new debit</p>
         <button type="submit">Add Debit</button>
       </form>
+
       {debitsView()}
     </div>
-  );
-};
+  )
+}
 
 export default Debits;
