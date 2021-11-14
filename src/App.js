@@ -72,7 +72,7 @@ class App extends Component {
     );
     const { debits } = this.state;
     const DebitsComponent = () => (
-      <Debits addDebit={this.addDebit} debits={debits} />
+      <Debits addDebit={this.addDebit} debits={debits} accountBalance={this.state.accountBalance}/>
     );
     const { credits } = this.state;
     const CreditsComponent = () => (
