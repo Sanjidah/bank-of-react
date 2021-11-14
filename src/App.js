@@ -32,8 +32,8 @@ class App extends Component {
     debits = debits.data;
     credits = credits.data;
 
-    let debitSum = 0,
-      creditSum = 0;
+    let debitSum = 0;
+    let creditSum = 0;
     debits.forEach((debit) => {
       debitSum += debit.amount;
     });
