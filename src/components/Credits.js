@@ -37,7 +37,7 @@ const Credits = (props) => {
                 <p>Enter description here:</p>
                 <input type="text" name="description" />
                 <p>Enter amount here:</p>
-                <input type="number" name="amount" />
+                <input type="number" name="amount"/>
                 <p>Click to submit new credit</p>
                 <button type="submit">Add Credit</button>
             </form>

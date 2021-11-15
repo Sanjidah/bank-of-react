@@ -65,7 +65,10 @@ class App extends Component {
     const d = new Date();
     let update = {"id": Math.random(),"description": description,"amount": amount,"date": d.toISOString()};
     credits.push(update);
-    this.setState(credits);
+    this.setState(credits)
+
+    let addBalance = Number(this.state.accountBalance) + amount; // adds credit to account balance 
+    this.setState({accountBalance: addBalance})
   };
 
   mockLogIn = (logInInfo) => {
