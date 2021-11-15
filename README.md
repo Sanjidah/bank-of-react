@@ -1,4 +1,20 @@
-# Getting Started with Create React App
+
+## Team
+- Sanjidah Abdullah (@sanjidah)
+- Mariam Khan (@mariamkhan-dev)
+- Heaven Kadro (@Hkadro)
+- Komal Kaur (@Komal914)
+
+## Goal 
+Create a basic banking app 
+
+## Objectives 
+- Introduce client-side routing
+- Add client-side routing to our React apps using React Router
+- Set up React Router to enable common browser behavior
+- Understand built in React Router components (Route, Router, Switch, Link, Redirect)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
