@@ -63,8 +63,13 @@ class App extends Component {
     const amount = Number(e.target[1].value);
     console.log(description, amount);
     const d = new Date();
-    let update = {"id": Math.random(),"description": description,"amount": amount,"date": d.toISOString()};
-    credits.push(update);
+    let update = {
+      "id": Math.random(),
+      "description": description,
+      "amount": amount,
+      "date": d.toISOString()
+    };
+    credits.push(update); // new credits is pushed to credits array
     this.setState(credits)
 
     let addBalance = Number(this.state.accountBalance) + amount; // adds credit to account balance 
