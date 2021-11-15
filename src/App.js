@@ -54,6 +54,28 @@ class App extends Component {
     console.log(description, amount);
   };
 
+  addCredit = (e) => {
+    //send to credits view via props
+    //updates state based off user input
+    var credits = this.state.credits;
+    e.preventDefault();
+    const description = e.target[0].value;
+    const amount = Number(e.target[1].value);
+    console.log(description, amount);
+    const d = new Date();
+    let update = {
+      "id": Math.random(),
+      "description": description,
+      "amount": amount,
+      "date": d.toISOString()
+    };
+    credits.push(update); // new credits is pushed to credits array
+    this.setState(credits)
+
+    let addBalance = Number(this.state.accountBalance) + amount; // adds credit to account balance 
+    this.setState({accountBalance: addBalance})
+  };
+
   mockLogIn = (logInInfo) => {
     const newUser = { ...this.state.currentUser };
     newUser.userName = logInInfo.userName;
