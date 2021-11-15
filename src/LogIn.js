@@ -42,13 +42,15 @@ class LogIn extends Component {
         <Link to="/credits" class="btn-area"> Credits </Link>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor="userName">User Name</label>
+            <label htmlFor="userName">User Name </label>
             <input type="text" name="userName" onChange={this.handleChange} value={this.state.user.userName} />
           </div>
           <div>
-            <label htmlFor="password">Password</label>
+            <p></p>
+            <label htmlFor="password">Password </label>
             <input type="password" name="password" />
           </div>
+          <p></p>
           <button>Log In</button>
         </form>
       </div>
