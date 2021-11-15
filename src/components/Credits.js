@@ -34,11 +34,14 @@ const Credits = (props) => {
             <AccountBalance accountBalance={props.accountBalance}/>
             
             <form onSubmit={props.addCredit}>
-                <p>Enter description here:</p>
+                <p></p>
+                <label htmlFor="description"> Enter description here: </label>
                 <input type="text" name="description" />
-                <p>Enter amount here:</p>
+                <p></p>
+                <label htmlFor="amount"> Enter amount here: </label>
                 <input type="number" name="amount" step="0.01"/>
-                <p>Click to submit new credit</p>
+                <p></p>
+                <label htmlFor="submit"> Click to submit new credit: </label>
                 <button type="submit">Add Credit</button>
             </form>
 

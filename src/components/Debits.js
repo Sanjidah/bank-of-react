@@ -19,6 +19,8 @@ const Debits = (props) => {
       );
     });
   };
+
+
   
   return (
     <div>
@@ -31,17 +33,19 @@ const Debits = (props) => {
       <Link to="/logIn" class="btn-area"> Log In  </Link>
       <Link to="/userProfile" class="btn-area"> User Profile </Link>
       <Link to="/credits" class="btn-area"> Credits </Link>
-      <AccountBalance accountBalance={props.accountBalance}/>
+      <AccountBalance accountBalance={props.accountBalance}/>      
       
       <form onSubmit={props.addDebit}>
-        <p>Enter description here:</p>
+        <p></p>
+        <label htmlFor="description"> Enter description here: </label>
         <input type="text" name="description" />
-        <p>Enter amount here:</p>
-        <input type="number" name="amount" />
-        <p>Click to submit new debit</p>
+        <p></p>
+        <label htmlFor="amount"> Enter amount here: </label>
+        <input type="number" name="amount" step="0.01"/>
+        <p></p>
+        <label htmlFor="submit"> Click to submit new debit: </label>
         <button type="submit">Add Debit</button>
       </form>
-
       {debitsView()}
     </div>
   )
