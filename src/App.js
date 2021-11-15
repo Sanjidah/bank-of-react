@@ -48,10 +48,23 @@ class App extends Component {
   addDebit = (e) => {
     //send to debits view via props
     //updates state based off user input
+    var debits = this.state.debits;
     e.preventDefault();
     const description = e.target[0].value;
     const amount = Number(e.target[1].value);
     console.log(description, amount);
+    const d = new Date();
+    let update = {
+      id: Math.random(),
+      description: description,
+      amount: amount,
+      date: d.toISOString(),
+    };
+    debits.push(update); // new debits is pushed to debits array
+    this.setState(debits);
+
+    let addBalance = Number(this.state.accountBalance) - amount; // subtacts debit to account balance
+    this.setState({ accountBalance: addBalance });
   };
 
   addCredit = (e) => {
@@ -64,16 +77,16 @@ class App extends Component {
     console.log(description, amount);
     const d = new Date();
     let update = {
-      "id": Math.random(),
-      "description": description,
-      "amount": amount,
-      "date": d.toISOString()
+      id: Math.random(),
+      description: description,
+      amount: amount,
+      date: d.toISOString(),
     };
     credits.push(update); // new credits is pushed to credits array
-    this.setState(credits)
+    this.setState(credits);
 
-    let addBalance = Number(this.state.accountBalance) + amount; // adds credit to account balance 
-    this.setState({accountBalance: addBalance})
+    let addBalance = Number(this.state.accountBalance) + amount; // adds credit to account balance
+    this.setState({ accountBalance: addBalance });
   };
 
   mockLogIn = (logInInfo) => {
@@ -94,11 +107,19 @@ class App extends Component {
     );
     const { debits } = this.state;
     const DebitsComponent = () => (
-      <Debits addDebit={this.addDebit} debits={debits} accountBalance={this.state.accountBalance}/>
+      <Debits
+        addDebit={this.addDebit}
+        debits={debits}
+        accountBalance={this.state.accountBalance}
+      />
     );
     const { credits } = this.state;
     const CreditsComponent = () => (
-      <Credits addCredit={this.addCredit} credits={credits} accountBalance={this.state.accountBalance} />
+      <Credits
+        addCredit={this.addCredit}
+        credits={credits}
+        accountBalance={this.state.accountBalance}
+      />
     );
     const LogInComponent = () => (
       <LogIn user={this.state.currentUser} mockLogIn={this.mockLogIn} />
